@@ -19,7 +19,12 @@ const app = express();
 
 dotenv.config();
 
-app.use(cors());
+app.use(
+    cors({
+        origin: "*",
+        credentials: true,
+    })
+)
 
 
 app.use(express.json());
