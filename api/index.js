@@ -31,8 +31,9 @@ app.use(express.json());
 
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
+URL = "mongodb+srv://blog:blog34@cluster0.53n4xs2.mongodb.net/?retryWrites=true&w=majority"
 
-mongoose.connect(process.env.URL)
+mongoose.connect(URL)
   .then(console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
